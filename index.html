@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Microeconomía - Universidad Mariano Gálvez</title>
+    <!-- Tailwind CSS desde CDN para un diseño moderno y estético -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <!-- Navegación Fija -->
+    <nav class="sticky top-0 z-50 bg-slate-900 text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <span class="font-bold text-lg tracking-wide text-amber-400">UMG | Microeconomía</span>
+            <div class="hidden md:flex space-x-4 text-xs font-medium overflow-x-auto py-2">
+                <a href="#portada" class="hover:text-amber-400 transition">Inicio</a>
+                <a href="#alcance" class="hover:text-amber-400 transition">Alcance</a>
+                <a href="#problema" class="hover:text-amber-400 transition">Problema</a>
+                <a href="#objetivos" class="hover:text-amber-400 transition">Objetivos</a>
+                <a href="#justificacion" class="hover:text-amber-400 transition">Justificación</a>
+                <a href="#planificacion" class="hover:text-amber-400 transition">Planificación</a>
+                <a href="#empresa" class="hover:text-amber-400 transition">La Empresa</a>
+                <a href="#presupuesto" class="hover:text-amber-400 transition">Presupuesto</a>
+                <a href="#proceso" class="hover:text-amber-400 transition">Producción</a>
+                <a href="#tecnologia" class="hover:text-amber-400 transition">Tecnología</a>
+                <a href="#conclusiones" class="hover:text-amber-400 transition">Conclusiones</a>
+                <a href="#anexos" class="hover:text-amber-400 transition">Anexos</a>
+                <a href="#video" class="hover:text-amber-400 transition">Video</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado / Portada -->
+    <header id="portada" class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center space-y-4">
+            <h1 class="text-2xl md:text-3xl font-light text-amber-400 uppercase tracking-widest">Universidad Mariano Gálvez de Guatemala</h1>
+            <p class="text-sm md:text-base text-slate-300">Facultad de Ingeniería en Sistemas de Información y Ciencias de la Computación</p>
+            <div class="py-6">
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase">Proyecto Académico </span>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-white mt-4 tracking-tight">PROYECTO FINAL MICROECONOMÍA</h2>
+            </div>
+            
+            <!-- Tabla de Integrantes -->
+            <div class="mt-8 bg-slate-800/80 p-6 rounded-2xl shadow-2xl border border-slate-700 max-w-3xl mx-auto">
+                <h3 class="text-lg font-bold text-amber-400 mb-4 border-b border-slate-700 pb-2">Integrantes del Equipo</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-slate-300">
+                        <thead class="bg-slate-900 text-amber-400 text-xs uppercase">
+                            <tr>
+                                <th class="p-3">Nombre</th>
+                                <th class="p-3">Carnet</th>
+                                <th class="p-3 text-center">Aporte</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700">
+                            <tr><td class="p-3 font-semibold text-white">Carlos Luis Murga (Coordinador)</td><td class="p-3">0900-13-7313</td><td class="p-3 text-center font-bold text-emerald-400">100%</td></tr>
+                            <tr><td class="p-3 font-semibold text-white">José David Moreno Najarro</td><td class="p-3">0900-25-17340</td><td class="p-3 text-center font-bold text-emerald-400">100%</td></tr>
+                            <tr><td class="p-3 font-semibold text-white">Jacobo Efrain Ajqui Zunum</td><td class="p-3">0990-24-10544</td><td class="p-3 text-center font-bold text-emerald-400">100%</td></tr>
+                            <tr><td class="p-3 font-semibold text-white">Pedro Luis Cruz Marroquin</td><td class="p-3">0900-25-28628</td><td class="p-3 text-center font-bold text-emerald-400">100%</td></tr>
+                            <tr><td class="p-3 font-semibold text-white">José Jeremy Felipe Briones</td><td class="p-3">0900-23-12659</td><td class="p-3 text-center font-bold text-emerald-400">100%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+
+        <!-- Sección: Alcance del Proyecto -->
+        <section id="alcance" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">ALCANCE DEL PROYECTO</h2>
+            <p class="mb-6 text-slate-600">
+                Este plan se basa en el Manual de Usuario v1.1, actualizado el 7 de octubre de 2026. El sistema de administración de panadería descrito allí usa Windows Forms y SQL Server Express para guardar inventario, ventas, clientes, cuentas por pagar y proyecciones de producción. Durante cuatro semanas vamos a ordenar su alcance, preparar ejemplos guiados y revisar los controles necesarios. Este documento no desarrolla ni modifica el programa.
+            </p>
+            
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Funciones incluidas</h3>
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-sm border-collapse border border-slate-200">
+                    <thead class="bg-slate-100 text-slate-700">
+                        <tr>
+                            <th class="border border-slate-200 p-3 text-left w-1/4">Módulo</th>
+                            <th class="border border-slate-200 p-3 text-left">Alcance</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr><td class="border p-3 font-bold bg-slate-50">Acceso</td><td class="border p-3">Ingreso mediante el usuario y la contraseña definidos para el proyecto académico.</td></tr>
+                        <tr><td class="border p-3 font-bold bg-slate-50">Inventario</td><td class="border p-3">Registro de productos terminados e insumos, cantidades, unidades, precios, ubicación y vencimiento; control de entradas y salidas.</td></tr>
+                        <tr><td class="border p-3 font-bold bg-slate-50">Ventas</td><td class="border p-3">Identificación del cliente por NIT, registro de clientes nuevos, selección de productos, cálculo de importes y descuento automático de existencias al confirmar la venta.</td></tr>
+                        <tr><td class="border p-3 font-bold bg-slate-50">Cuentas por pagar</td><td class="border p-3">Registro de obligaciones con proveedores, nóminas y gastos fijos; abonos parciales y consulta de saldos pendientes.</td></tr>
+                        <tr><td class="border p-3 font-bold bg-slate-50">Clientes</td><td class="border p-3">Consulta de datos del cliente e historial de compras por fecha y NIT.</td></tr>
+                        <tr><td class="border p-3 font-bold bg-slate-50">Proyecciones</td><td class="border p-3">Registro de escenarios y producción real; cálculo del producto físico total, medio y marginal, etapas aproximadas, ingresos, resultado proyectado y punto de equilibrio.</td></tr>
+                        <tr><td class="border p-3 font-bold bg-slate-50">Gráficas</td><td class="border p-3">Representación de producción total, producto medio y marginal, e ingresos y costos para visualizar el equilibrio.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-slate-600 mb-4">
+                La información confirmada se almacenará en la base de datos. La producción marcada como real aumentará el inventario; los escenarios utilizados para simulación no modificarán las existencias. Las proyecciones se elaborarán con los costos, cantidades y demanda estimada ingresados por el usuario.
+            </p>
+
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-6">
+                <h4 class="font-bold text-amber-900 mb-1">Límites del proyecto</h4>
+                <p class="text-sm text-amber-800">
+                    Esta versión no contempla facturación electrónica, contabilidad completa, procesamiento de pagos bancarios, cálculo automático de nómina, consumo automático de ingredientes mediante recetas, conversión de filas de pan a unidades, anulación de ventas ni pronósticos estadísticos de demanda. Tampoco incluye curvas de indiferencia o utilidad marginal.<br><br>
+                    Las gráficas y los indicadores económicos apoyarán el análisis académico y la toma de decisiones, bajo los supuestos del modelo utilizado; no garantizarán resultados futuros.
+                </p>
+            </div>
+            
+            <p class="text-slate-600 text-sm">
+                Vamos a planificar una revisión guiada de los cinco módulos descritos: Inventario (productos terminados e insumos y movimientos manuales), Ventas (carrito y descuento del stock al confirmar), Clientes (registro por NIT e historial), Cuentas por pagar (proveedores, nómina, gastos fijos y abonos) y Proyecciones (escenarios de producción e indicadores de microeconomía). Los registros confirmados se guardan en la base Panadería de SQL Server. La propuesta define quién revisa cada dato y describe casos de ejemplo.<br><br>
+                Quedan fuera del plan programar o modificar el sistema, cambiar la base de datos o registrar movimientos reales. Tampoco se propone que el sistema emita facturas electrónicas, procese cobros bancarios, verifique NIT en la SAT, descuente insumos con recetas, genere cuentas recurrentes o pronostique la demanda; el manual indica que esas funciones no están incluidas.
+            </p>
+        </section>
+
+        <!-- Sección: Planteamiento del Problema -->
+        <section id="problema" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">PLANTEAMIENTO DEL PROBLEMA</h2>
+            <div class="space-y-4 text-slate-600">
+                <p>La operación de una panadería requiere controlar las existencias de productos terminados e insumos, registrar las ventas, mantener información de los clientes y dar seguimiento a las obligaciones de pago. Cuando estos registros se administran de forma manual o en archivos separados, resulta difícil disponer de información actualizada y relacionar la producción con las ventas y los costos.</p>
+                <p>La falta de integración puede ocasionar diferencias entre las existencias físicas y las registradas, ventas de productos sin disponibilidad y dificultades para consultar el historial de compras o conocer los saldos pendientes con proveedores y empleados. Esto limita la capacidad de organizar las actividades diarias y tomar decisiones con información consistente.</p>
+                <p>Además, conocer la cantidad producida no es suficiente para evaluar el desempeño de la panadería. Es necesario analizar cómo cambia la producción al variar el número de trabajadores, cuál es su productividad y cuántas unidades deben venderse para cubrir los costos. Sin registros comparables y herramientas de análisis, estos aspectos pueden quedar sujetos a estimaciones poco fundamentadas.</p>
+                <p>Para el caso académico de este proyecto, se plantea la necesidad de un sistema que centralice el inventario, las ventas, los clientes y las cuentas por pagar, e incorpore escenarios y gráficas de producción. Mediante los datos ingresados, permitirá aplicar conceptos de Microeconomía como el producto físico total, medio y marginal, las etapas aproximadas de producción y el punto de equilibrio.</p>
+            </div>
+        </section>
+
+        <!-- Sección: Objetivos -->
+        <section id="objetivos" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-amber-500 pl-4">OBJETIVOS</h2>
+            
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Objetivo General</h3>
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg text-indigo-950 font-medium">
+                    Desarrollar un sistema de escritorio para una panadería, utilizando C#, Windows Forms y SQL Server Express, que integre el control de inventario, ventas, clientes y cuentas por pagar, e incorpore herramientas de análisis microeconómico para apoyar la gestión y la evaluación de escenarios de producción.
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Objetivos Específicos</h3>
+                <ul class="grid md:grid-cols-2 gap-4">
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Diseñar el sistema mediante una arquitectura de tres capas—Entidades, Lógica de Negocio y Presentación— que facilite la organización y el mantenimiento del código.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Implementar el registro de productos terminados e insumos, con control de cantidades, unidades, precios, ubicación, vencimiento y movimientos de inventario.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Integrar el registro de ventas con la identificación de clientes por NIT, el cálculo de importes y el descuento automático de existencias al confirmar cada operación.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Permitir el registro de obligaciones con proveedores, nóminas y gastos fijos, así como el seguimiento de abonos y saldos pendientes.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Facilitar la consulta de información de clientes y de su historial de compras por fecha y NIT.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Incorporar escenarios de producción para calcular el producto físico total, medio y marginal, las etapas aproximadas de producción y el punto de equilibrio, mediante datos y supuestos definidos por el usuario.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Representar gráficamente la producción, la productividad y la relación entre ingresos y costos para facilitar la interpretación de los resultados.</li>
+                    <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm"><i class="fas fa-check-circle text-amber-500 mr-2"></i>Almacenar la información en la base de datos Panadería y documentar el uso del sistema mediante un manual de usuario.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección: Justificación -->
+        <section id="justificacion" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">JUSTIFICACIÓN</h2>
+            <div class="space-y-4 text-slate-600">
+                <p>El desarrollo de este proyecto se justifica por la necesidad de integrar la información operativa de una panadería en una herramienta que facilite el control de inventario, el registro de ventas, la consulta de clientes y el seguimiento de cuentas por pagar. Disponer de estos datos en una misma aplicación permite consultar las operaciones y reducir la dependencia de registros dispersos.</p>
+                <p>El sistema contribuye al control de existencias mediante el registro de entradas, salidas y producción real, así como el descuento automático de productos al confirmar una venta. También permite consultar el historial de compras y los saldos pendientes, proporcionando información útil para organizar las actividades diarias de la panadería.</p>
+                <p>Desde la perspectiva académica, el proyecto vincula el desarrollo de software con la aplicación de conceptos de Microeconomía. El módulo de Proyecciones permite comparar escenarios de producción y analizar el producto físico total, medio y marginal, las etapas aproximadas de producción y el punto de equilibrio. Sus gráficas facilitan la interpretación de los resultados y la comprensión de la relación entre trabajadores, producción y costos.</p>
+                <p>El uso de C#, Windows Forms, una arquitectura de tres capas y SQL Server Express permite organizar las responsabilidades del programa y conservar la información registrada. Esta estructura facilita el mantenimiento y ofrece una base para incorporar nuevas funciones.</p>
+                <p>En consecuencia, el proyecto aporta una herramienta de apoyo al control administrativo y un recurso para el aprendizaje práctico. Sus resultados pueden orientar la evaluación de alternativas de producción, considerando que las proyecciones dependen de la calidad de los datos ingresados y de los supuestos utilizados.</p>
+            </div>
+        </section>
+
+        <!-- Sección: Planificación Detallada -->
+        <section id="planificacion" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">PLANIFICACIÓN (CRONOGRAMA DE 4 SEMANAS)</h2>
+            <p class="text-slate-600 text-sm mb-6">Calendario completo de actividades, responsables y resultados esperados por día[ 43, 44]:</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs text-left border-collapse border border-slate-200">
+                    <thead class="bg-slate-100 text-slate-700">
+                        <tr>
+                            <th class="border p-2">Semana y Día</th>
+                            <th class="border p-2">Actividad y Responsable</th>
+                            <th class="border p-2">Resultado del día</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-600">
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 1 - Día 1</td><td class="border p-2">Delimitar el problema de la panadería y qué se busca ordenar. Resp: coordinación y encargado.</td><td class="border p-2">Problema y propósito claros.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 1 - Día 2</td><td class="border p-2">Definir el alcance: producción, inventario y cuentas por pagar, aclarar el papel de ventas y clientes. Resp: coordinación y encargado.</td><td class="border p-2">Límites del trabajo definidos.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 1 - Día 3</td><td class="border p-2">Repasar los módulos de inventario, ventas y clientes, cuentas por pagar y proyecciones. Resp: encargado y coordinación.</td><td class="border p-2">Lista de módulos y funciones.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 1 - Día 4</td><td class="border p-2">Revisar requisitos: Windows, .NET 8, SQL Server Express, base Panadería, carpeta, conexion.txt y permisos. Resp: encargado y administrador SQL.</td><td class="border p-2">Requisitos y faltantes identificados.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 1 - Día 5</td><td class="border p-2">Revisar problema, alcance y objetivos; anotar fecha de inicio. Resp: coordinación y encargado.</td><td class="border p-2">Alcance y objetivos listos; fecha anotada.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 2 - Día 6</td><td class="border p-2">Describir cómo se consultan y registran productos, categorías, unidades, saldos, precios y vencimientos. Resp: encargado y coordinación.</td><td class="border p-2">Pasos básicos de inventario descritos.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 2 - Día 7</td><td class="border p-2">Describir entradas y salidas de existencias y registro de la producción real. Resp: encargado y coordinación.</td><td class="border p-2">Diferencia entre producir y consumir insumos aclarada.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 2 - Día 8</td><td class="border p-2">Ordenar pasos de venta: identificar cliente por NIT, elegir productos, revisar total y confirmar. Resp: encargado y coordinación.</td><td class="border p-2">Stock baja al confirmar la venta.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 2 - Día 9</td><td class="border p-2">Describir cómo se guarda una cuenta por pagar y cómo se registra un abono. Resp: encargado y coordinación.</td><td class="border p-2">Deuda y abono documentados.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 2 - Día 10</td><td class="border p-2">Separar registro de deuda de la entrada de materiales; describir consulta de clientes y compras. Resp: encargado y coordinación.</td><td class="border p-2">Guardar deuda no aumenta inventario.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 3 - Día 11</td><td class="border p-2">Comprobar ejemplo de harina: hay 25 libras y se consumen 5. Resp: coordinación y revisión del encargado.</td><td class="border p-2">Saldo final: 20 libras.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 3 - Día 12</td><td class="border p-2">Comprobar venta de 3 panes dulces a Q2.00 c/u partiendo de 10 unidades. Resp: coordinación y encargado.</td><td class="border p-2">Venta: Q6.00; saldo: 7 unidades.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 3 - Día 13</td><td class="border p-2">Comprobar cuenta de Q100.00 con abono de Q40.00. Resp: coordinación y encargado.</td><td class="border p-2">Saldo pendiente: Q60.00.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 3 - Día 14</td><td class="border p-2">Ordenar escenarios de producción con 1, 2, 3 y 4 trabajadores; revisar PFT, PFM y PFMg. Resp: coordinación y encargado.</td><td class="border p-2">Cuatro escenarios revisados; marginal negativo identificado.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 3 - Día 15</td><td class="border p-2">Revisar equilibrio de 2 trabajadores (CF Q100, CV Q200, precio Q2, demanda 300). Resp: coordinación y encargado.</td><td class="border p-2">Equilibrio: 100 unidades; proyección: 200 vendidas.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 4 - Día 16</td><td class="border p-2">Confirmar equipo, programas, base y permisos; revisar rutina de respaldo. Resp: encargado y admin SQL.</td><td class="border p-2">Disponibilidad técnica y respaldos anotados.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 4 - Día 17</td><td class="border p-2">Revisar riesgos de retraso, costos, accesos, existencias duplicadas y pérdida de datos. Resp: coordinación y encargado.</td><td class="border p-2">Riesgos y controles descritos.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 4 - Día 18</td><td class="border p-2">Revisar base legal de Guatemala y documentos a confirmar con contabilidad. Resp: encargado y coordinación.</td><td class="border p-2">Normas y documentos identificados.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 4 - Día 19</td><td class="border p-2">Revisar presupuesto: 28 horas, Q40/h referencia, reserva 10% y cotizaciones. Resp: coordinación y encargado.</td><td class="border p-2">Estimado base Q1,120; con reserva Q1,232.</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Semana 4 - Día 20</td><td class="border p-2">Revisar plan completo, corregir detalles y fijar fecha de inicio. Resp: coordinación y encargado.</td><td class="border p-2">Versión final revisada, sin cambios al programa ni base.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección: La Empresa & Propósito -->
+        <section id="empresa" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-amber-500 pl-4">LA EMPRESA: EL HORNO DE LA DOS</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Origen y Datos Generales</h3>
+                    <p class="text-slate-600 text-sm mb-4">Fundada en 1986, inició como un pequeño negocio familiar que, gracias a sus recetas artesanales, se posicionó rápidamente como la panadería más famosa del barrio. Debido a su éxito a lo largo de los años, la demanda diaria actual ha superado la capacidad de gestión manual. La transición generacional en la dirección del negocio exige una modernización urgente, buscando implementar un software que permita mejorar los procesos de producción, control de inventario, y pago a proveedores y acreedores.</p>
+                    <ul class="text-sm space-y-1 text-slate-700">
+                        <li><strong>• Nombre:</strong> El Horno de la Dos</li>
+                        <li><strong>• Ubicación:</strong> Zona 2, Ciudad de Guatemala</li>
+                        <li><strong>• Número de Empleados:</strong> 20 colaboradores directos.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Estructura Empresarial</h3>
+                    <p class="text-slate-600 text-sm mb-2">El liderazgo está a cargo del hijo del fundador (Gerente General), quien impulsa la modernización y expansión B2B (distribución a otras zonas). Las áreas clave se dividen en:</p>
+                    <ul class="text-sm space-y-2 text-slate-700">
+                        <li><strong>• Administración y Finanzas:</strong> Gerencia, Tesorería (flujo de caja diario) y Contabilidad. Centralizada en la Gerencia General, con enfoque en modernización y trabajo por objetivos.</li>
+                        <li><strong>• Producción:</strong> Liderada por un jefe de Producción.</li>
+                        <li><strong>• Ventas y Mostrador:</strong> Atención al cliente y cajas.</li>
+                        <li><strong>• Logística y Bodega:</strong> Encargados de inventario y equipo de distribución externa.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-8 border-slate-200">
+
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">PROPÓSITO</h2>
+            <p class="text-slate-600 mb-6">
+                Modernizar la administración de "El Horno de la Dos" para soportar el aumento de la demanda diaria y facilitar su futura expansión comercial. El propósito central es que la gerencia deje de tomar decisiones empíricas y comience a basar su estrategia en el análisis de datos exactos proporcionados por el sistema.<br><br>
+                A través del módulo de gráficas de proyecciones, la empresa podrá visualizar la relación directa entre sus ingresos y costos (fijos y variables), lo que le permitirá identificar matemáticamente su punto de equilibrio y definir metas de ventas alineadas a la demanda prevista.<br><br>
+                De igual forma, el propósito analítico es ayudar a la gerencia a identificar en qué etapa de producción se encuentra la panadería, evitando tomar decisiones perjudiciales, como contratar más trabajadores cuando el producto marginal indique rendimientos decrecientes o negativos.<br><br>
+                Finalmente, se busca salvaguardar la información histórica y confidencial del negocio centralizándola en una base de datos relacional segura con capacidad de generar respaldos periódicos.
+            </p>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Etapas de la Formación de la Empresa</h3>
+            <ul class="space-y-3 text-slate-600 text-sm">
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-200"><strong>• Capacitación Empresarial:</strong> Realizar talleres prácticos con el personal administrativo y operativo para asegurar una transición fluida hacia el nuevo sistema. Se utilizará y socializará la Versión 1.1 del "Manual de usuario" oficial, capacitando en las 5 pestañas clave: Inventario, Ventas, Cuentas por pagar, Clientes y Proyecciones.</li>
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-200"><strong>• Fomentar la cultura de aprendizaje continua:</strong> Integrar un agente de Inteligencia Artificial (IA) de asistencia interna, capaz de responder dudas referentes al manejo del sistema en tiempo real y guiar a los usuarios (por ejemplo, recordar que el consumo de ingredientes debe registrarse como "Salida" manual o que carritos sin confirmar se descartan)[ 47, 48].</li>
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-200"><strong>• Fomento a adquirir nuevos conocimientos, habilidades y competencias:</strong> Incentivar a los empleados administrativos a interpretar indicadores microeconómicos (PFT, PFM, PFMg) y capacitar al personal técnico en la administración y creación de respaldos (`.bak`) en SQL Server Management Studio (SSMS).</li>
+            </ul>
+        </section>
+
+        <!-- Sección: Riesgos y Base Legal -->
+        <section class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">RIESGOS</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse border border-slate-200">
+                        <thead class="bg-slate-100">
+                            <tr><th class="border p-2">Riesgo</th><th class="border p-2">Qué puede pasar</th><th class="border p-2">Cómo lo manejamos</th></tr>
+                        </thead>
+                        <tbody class="divide-y text-slate-600">
+                            <tr><td class="border p-2 font-bold">Conexión o permisos incorrectos</td><td class="border p-2">El programa apunta a otra base o la cuenta no puede acceder.</td><td class="border p-2">Revisar conexion.txt, servidor, base Panadería y permisos Windows/SQL. No compartir claves.</td></tr>
+                            <tr><td class="border p-2 font-bold">Pérdida de información</td><td class="border p-2">Los registros confirmados están en SQL Server; la carpeta no los respalda automáticamente.</td><td class="border p-2">Quien administre la base hace y verifica un bak antes de cambios y según rutina acordada.</td></tr>
+                            <tr><td class="border p-2 font-bold">Existencias duplicadas / Datos mal capturados</td><td class="border p-2">Registrar producción real ya suma stock; volver a ingresar como Entrada duplica saldo. Consumo es manual.</td><td class="border p-2">Registrar producción real una sola vez y llevar aparte salidas de ingredientes. Revisar NIT y datos.</td></tr>
+                            <tr><td class="border p-2 font-bold">Proyecciones mal interpretadas</td><td class="border p-2">Gráficas usan datos manuales y solo comparan escenarios con condiciones iguales.</td><td class="border p-2">Mantener serie, producto, fecha, capital y tecnología comparables; no tratar como utilidad contable.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">BASE LEGAL Y CONDICIONES DE USO</h2>
+                <p class="text-xs text-slate-600 mb-4">En Guatemala, el sistema resguarda NIT, nombres, ventas y existencias. Se debe usar acceso autorizado y no divulgar información del negocio.</p>
+                <ul class="text-xs space-y-2 text-slate-700">
+                    <li class="bg-slate-50 p-3 rounded"><strong>Constitución (Art. 24):</strong> Protege correspondencia, documentos y libros; registros tributarios sujetos a la ley.</li>
+                    <li class="bg-slate-50 p-3 rounded"><strong>Código de Comercio (Dto. 2-70, Art. 368):</strong> Obligaciones de contabilidad organizada. El sistema apoya el registro diario, mas no reemplaza libros oficiales.</li>
+                    <li class="bg-slate-50 p-3 rounded"><strong>Código Tributario (Dto. 6-91) y Ley del IVA (Dto. 27-92):</strong> El programa no emite facturas electrónicas ni valida NIT en la SAT; procesos fiscales van por vía oficial.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección: Presupuesto y Recursos (CON RECURSOS HUMANOS COMPLETOS) -->
+        <section id="presupuesto" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">PRESUPUESTO Y RECURSOS</h2>
+            <p class="text-slate-600 text-sm mb-6">
+                Se requiere planificar recursos humanos, financieros y materiales para garantizar el éxito del ciclo de desarrollo del software[ 51].
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Presupuesto Financiero</h3>
+                    <table class="w-full text-sm border">
+                        <thead class="bg-slate-100 text-left">
+                            <tr><th class="p-2 border">Concepto</th><th class="p-2 border">Costo estimado</th></tr>
+                        </thead>
+                        <tbody class="divide-y text-slate-600 text-xs">
+                            <tr><td class="p-2 border">Desarrollo del software simulado</td><td class="p-2 border">Q4,500.00[ 52]</td></tr>
+                            <tr><td class="p-2 border">Diseño y configuración de base de datos</td><td class="p-2 border">Q1,500.00[ 52]</td></tr>
+                            <tr><td class="p-2 border">Equipo tecnológico</td><td class="p-2 border">Q20,000.00[ 52]</td></tr>
+                            <tr><td class="p-2 border">Capacitación del personal</td><td class="p-2 border">Q1,500.00[ 52]</td></tr>
+                            <tr><td class="p-2 border">Pruebas y correcciones</td><td class="p-2 border">Q500.00[ 52]</td></tr>
+                            <tr><td class="p-2 border">Mantenimiento y mejoras</td><td class="p-2 border">Q500.00[ 52]</td></tr>
+                            <tr><td class="p-2 border">Material promocional</td><td class="p-2 border">Q500.00[ 52]</td></tr>
+                            <tr class="font-bold bg-amber-50 text-slate-900"><td class="p-2 border">Total estimado</td><td class="p-2 border">Q29,000.00[ 52]</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Estimación de Horas del Plan</h3>
+                    <table class="w-full text-sm border">
+                        <thead class="bg-slate-100 text-left">
+                            <tr><th class="p-2 border">Recurso o gasto</th><th class="p-2 border">Tiempo</th><th class="p-2 border">Monto (Ref Q40/h)</th></tr>
+                        </thead>
+                        <tbody class="divide-y text-slate-600 text-xs">
+                            <tr><td class="p-2 border">Coordinación del plan</td><td class="p-2 border">24 hrs</td><td class="p-2 border">Q960</td></tr>
+                            <tr><td class="p-2 border">Persona encargada</td><td class="p-2 border">4 hrs</td><td class="p-2 border">Q160</td></tr>
+                            <tr><td class="p-2 border">Reserva del 10%</td><td class="p-2 border">2.8 hrs</td><td class="p-2 border">Q112</td></tr>
+                            <tr class="font-bold bg-indigo-50 text-slate-900"><td class="p-2 border">Total Estimado</td><td class="p-2 border">30.8 hrs</td><td class="p-2 border">Q1,232</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Asignación de Recursos Humanos Detallada del Documento -->
+            <h3 class="text-xl font-bold text-slate-800 mb-3 mt-8">Asignación de Recursos Humanos</h3>
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-xs border-collapse border border-slate-200">
+                    <thead class="bg-slate-100 text-slate-700">
+                        <tr><th class="border p-2 w-1/3">Recurso Humano</th><th class="border p-2">Funciones</th></tr>
+                    </thead>
+                    <tbody class="divide-y text-slate-600">
+                        <tr><td class="border p-2 font-bold bg-slate-50">Administrador del proyecto</td><td class="border p-2">Planificar y coordinar actividades, distribuir responsabilidades, supervisar avances y verificar cumplimiento de objetivos, plazos y entregables[ 53].</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Analista de sistemas</td><td class="border p-2">Identificar necesidades operativas de la panadería, analizar procedimientos existentes y documentar requerimientos funcionales y no funcionales[ 53, 54].</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Desarrollador del software</td><td class="border p-2">Diseñar, programar e integrar módulos del sistema, implementar funcionalidades, establecer conexión con base de datos y realizar ajustes técnicos[ 54].</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Encargado de producción</td><td class="border p-2">Proporcionar información sobre procesos de elaboración, consumo de materias primas, cantidades producidas y registros necesarios[ 54].</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Encargado de inventario</td><td class="border p-2">Facilitar información sobre entradas y salidas de materias primas, existencias disponibles, niveles mínimos de inventario y necesidades de abastecimiento[ 54].</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Contador</td><td class="border p-2">Proporcionar información sobre proveedores, acreedores, órdenes de compra, facturas, obligaciones pendientes, vencimientos y pagos efectuados[ 54].</td></tr>
+                        <tr><td class="border p-2 font-bold bg-slate-50">Usuarios finales</td><td class="border p-2">Participar en pruebas y evaluación del software, verificar facilidad de uso de la interfaz y comprobar funcionamiento de opciones[ 54].</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Recursos Materiales y Tecnológicos</h3>
+            <ul class="list-disc pl-5 text-xs text-slate-600 space-y-1">
+                <li><strong>Computadoras:</strong> Para diseñar, programar, ejecutar y evaluar el software simulado y elaborar documentación[ 55].</li>
+                <li><strong>Conexión a Internet:</strong> Consultar documentación, recursos educativos y herramientas de desarrollo[ 55].</li>
+                <li><strong>Software y herramientas de desarrollo:</strong> Entornos de programación, editores de código y herramientas de diseño[ 55].</li>
+                <li><strong>Sistema gestor de bases de datos:</strong> Almacenar, organizar y consultar registros de producción, inventarios, proveedores y pagos[ 55].</li>
+            </ul>
+        </section>
+
+        <!-- Sección: Proceso de Producción -->
+        <section id="proceso" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 border-l-4 border-amber-500 pl-4">PROCESO DE PRODUCCIÓN Y DESARROLLO</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-amber-600 mb-2">1. Generar Ideas</h3>
+                    <p class="text-xs text-slate-600">Surgido de problemas de control de materias primas (harina, azúcar, levadura, mantequilla, huevos), inventario, proveedores, acreedores y planificación diaria[ 56].</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-amber-600 mb-2">2. Definir el Producto</h3>
+                    <p class="text-xs text-slate-600">Apoyar procesos de producción de pan, manejo de insumos y cantidades diarias. Incluye módulos de Reportes (tablas/gráficos diarios) y Clientes (historial y pedidos)[ 56, 57].</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-amber-600 mb-2">3. Diseño Inicial</h3>
+                    <p class="text-xs text-slate-600">Establecer estructura general, distribución de pantallas, organización de módulos y almacenamiento para que sea sencillo y comprensible[ 58].</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-amber-600 mb-2">4. Validar y Pruebas</h3>
+                    <p class="text-xs text-slate-600">Comprobar funciones de producción, inventario, proveedores, acreedores y pagos. Detectar errores de cálculo o inconsistencias de materias primas[ 58].</p>
+                </div>
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 col-span-2">
+                    <h3 class="font-bold text-amber-600 mb-2">5. Comercializar</h3>
+                    <p class="text-xs text-slate-600">Dar a conocer funciones y beneficios del sistema para mejorar la organización y control de operaciones diarias y seguimiento de obligaciones económicas[ 58].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Tecnología del Proyecto -->
+        <section id="tecnologia" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">TECNOLOGÍA DEL PROYECTO</h2>
+            <div class="space-y-4 text-slate-600 text-sm">
+                <p>La tecnología del proyecto encarna los principios de una lógica ordenada y metódica para abordar la producción panadera de forma eficiente en la panadería El Horno de la Dos[ 59]:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Desarrollado en <strong>C#</strong> y entorno de ejecución <strong>.NET 8 desktop</strong> como programa de Windows Forms en tres capas (Entidades, Lógica de Negocio y Presentación), e incluye la DLL de un agente de Inteligencia Artificial[ 59].</li>
+                    <li>Base de datos <strong>Panadería en SQL Server Express</strong> (instancia SQLEXPRESS01) con instrucciones T-SQL, tablas master/detail y procedimientos almacenados (`CrearProducto`, `MoverStock`, `GuardarCliente`, `RegistrarVenta`, `AbonarCuenta`, `RegistrarProduccion`)[ 59].</li>
+                    <li>
+                        El programa de gráficas incorporado en la ventana principal (`Panaderia.exe`) permite estimar matemáticamente:
+                        <ul class="list-circle pl-6 mt-2 space-y-1 font-mono text-xs text-slate-800 bg-slate-100 p-3 rounded">
+                            <li>• Producto Físico Total: PFT = Q</li>
+                            <li>• Producto Medio: PFM = Q / L</li>
+                            <li>• Producto Marginal: PFMg = ΔQ / ΔL</li>
+                            <li>• Punto de Equilibrio: CF / (Precio - (CV / Q))</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="pt-2"><strong>Impacto y Optimización:</strong> La gerencia migra de decisiones empíricas a decisiones estratégicas basadas en datos exactos. Coordina a los 20 empleados en turnos rotativos, mejora la comunicación intercomunitaria y previene la contratación ineficiente al identificar etapas de rendimientos decrecientes.</p>
+            </div>
+        </section>
+
+        <!-- Sección: Conclusiones -->
+        <section id="conclusiones" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">CONCLUSIONES</h2>
+            <ul class="space-y-3 text-slate-600 text-sm">
+                <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3"></i>El proyecto integra el inventario, las ventas, los clientes y las cuentas por pagar en una aplicación de escritorio, facilitando la consulta de información y el seguimiento de las operaciones de la panadería[ 61].</li>
+                <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3"></i>El registro de movimientos, el ingreso de producción real y el descuento de existencias al confirmar ventas permiten mantener un control actualizado del inventario[ 61].</li>
+                <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3"></i>El módulo de Proyecciones vincula el funcionamiento de la panadería con conceptos de Microeconomía, mediante el cálculo del producto físico total, medio y marginal, las etapas aproximadas de producción y el punto de equilibrio[ 61].</li>
+                <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3"></i>Las gráficas facilitan la comparación de escenarios y la interpretación de la relación entre trabajadores, producción, ingresos y costos[ 61].</li>
+                <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3"></i>La arquitectura de tres capas y el almacenamiento en SQL Server Express proporcionan una estructura organizada para el mantenimiento del sistema y la incorporación de mejoras futuras[ 61].</li>
+                <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3"></i>El proyecto constituye una aplicación práctica de programación y análisis económico aplicable a un entorno real de negocio[ 61].</li>
+            </ul>
+        </section>
+
+        <!-- Sección: Anexos -->
+        <section id="anexos" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4 border-l-4 border-amber-500 pl-4">ANEXOS (INTERFACES Y DIAGRAMAS DEL SISTEMA)</h2>
+            <p class="text-slate-600 text-sm mb-4">El documento incluye capturas de pantalla de las interfaces de escritorio del sistema de Panadería:</p>
+            <ul class="list-disc pl-5 text-xs text-slate-600 space-y-2">
+                <li><strong>Módulo Inventario:</strong> Control de códigos, categorías (terminados, insumos), unidades, cantidades, precios y fechas de vencimiento.</li>
+                <li><strong>Módulo Ventas:</strong> Búsqueda por NIT, carrito de compras, selección de forma de pago y confirmación de venta con descuento automático de stock.</li>
+                <li><strong>Módulo Cuentas por Pagar:</strong> Registro de obligaciones con proveedores o empleados, fechas, importes, abonos parciales y cálculo automático de saldos pendientes.</li>
+                <li><strong>Módulo Clientes y Reportes:</strong> Consulta por NIT e historial de compras con detalle de transacciones.</li>
+                <li><strong>Módulo Proyecciones y Gráficas:</strong> Ingreso de trabajadores, PFT, costos fijos y variables, precio y demanda, junto a las pestañas de gráficas para Producto Total, Producto Medio/Marginal y Punto de Equilibrio.</li>
+                <li><strong>Diagramas Técnicos:</strong> Diagrama de flujo general del programa y esquema relacional de la base de datos `Panadería` (tablas Clientes, VentaCabecera, Ventas, Inventario, Produccion, MovimientosInventario, CuentasPorPagar, Abonos).</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN REQUERIDA DEL VIDEO DE PRESENTACIÓN -->
+        <section id="video" class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-amber-400 mb-4 text-center">VIDEO DE PRESENTACIÓN DEL PROYECTO</h2>
+            <p class="text-center text-slate-300 text-sm mb-6">Demostración audiovisual del sistema de Microeconomía</p>
+            
+            <div class="max-w-3xl mx-auto bg-black rounded-xl overflow-hidden aspect-video shadow-2xl flex items-center justify-center">
+                <!-- LÍNEA DE CÓDIGO DEL VIDEO REQUERIDA -->
+                <video controls width="100%" poster="https://via.placeholder.com/800x450?text=Cargar+VideoMicro"><source src="VideoMicro.mp4" type="video/mp4">Tu navegador no soporta el formato de video.</video>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-6xl mx-auto px-4 space-y-2">
+            <p>© 2026 Universidad Mariano Gálvez de Guatemala - Facultad de Ingeniería en Sistemas</p>
+            <p>Proyecto Final de Microeconomía | Catedrático y Equipo de Trabajo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
